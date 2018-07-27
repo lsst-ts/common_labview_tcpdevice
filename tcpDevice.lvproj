@@ -1,6 +1,7 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <Project Type="Project" LVVersion="16008000">
 	<Item Name="My Computer" Type="My Computer">
+		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Property Name="server.app.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.control.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.tcp.enabled" Type="Bool">false</Property>
@@ -27,9 +28,24 @@
 		<Item Name="tcpDevice" Type="Folder">
 			<Item Name="tcpDevice.lvclass" Type="LVClass" URL="../tcpDevice/tcpDevice.lvclass"/>
 		</Item>
+		<Item Name="typedefs" Type="Folder">
+			<Item Name="deviceStatus.ctl" Type="VI" URL="../typedefs/deviceStatus.ctl"/>
+			<Item Name="heartbeat.ctl" Type="VI" URL="../typedefs/heartbeat.ctl"/>
+			<Item Name="messageEnd.ctl" Type="VI" URL="../typedefs/messageEnd.ctl"/>
+			<Item Name="statusEnum.ctl" Type="VI" URL="../typedefs/statusEnum.ctl"/>
+		</Item>
+		<Item Name="Example" Type="Folder">
+			<Item Name="tcpDeviceExample" Type="Folder">
+				<Item Name="tcpExampleControler.lvclass" Type="LVClass" URL="../example/ExampleDevice/tcpExampleControler.lvclass"/>
+			</Item>
+			<Item Name="tcpDeviceMainExample.vi" Type="VI" URL="../example/tcpDeviceMainExample.vi"/>
+		</Item>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Clear Errors.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Clear Errors.vi"/>
+				<Item Name="High Resolution Relative Seconds.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/High Resolution Relative Seconds.vi"/>
+				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
+				<Item Name="Trim Whitespace.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace.vi"/>
 			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
